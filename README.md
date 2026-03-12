@@ -5,7 +5,8 @@ desenvolvido como parte de um desafio técnico. O projeto utiliza o
 framework **Yii2 (Basic)** com banco de dados **PostgreSQL**.
 
 ## 📌 Prints
-./prints
+Veja todas as imagens do sistema na pasta abaixo:
+👉 [Abrir pasta de prints](./prints)
 
 ------------------------------------------------------------------------
 
