@@ -48,8 +48,8 @@ framework **Yii2 (Basic)** com banco de dados **PostgreSQL**.
 ## 1️⃣ Clonar o repositório
 
 ``` bash
-git clone https://seu-repositorio.git
-cd nome-do-projeto
+git clone https://github.com/Philipe-Souz4/sistema-rh.git
+cd sistema-rh
 ```
 
 ------------------------------------------------------------------------
