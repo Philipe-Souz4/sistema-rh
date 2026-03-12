@@ -34,3 +34,23 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+# Configurações sensíveis (Banco de Dados)
+/config/db.php
+
+# Runtime e Cache
+/runtime/*
+!/runtime/.gitignore
+/web/assets/*
+!/web/assets/.gitignore
+
+# Outros
+.env
+.DS_Store
+
+assets/*
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+protected/data/*.db
+themes/classic/views/
