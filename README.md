@@ -4,13 +4,16 @@ Este é um sistema de **gerenciamento de funcionários e cargos**
 desenvolvido como parte de um desafio técnico. O projeto utiliza o
 framework **Yii2 (Basic)** com banco de dados **PostgreSQL**.
 
+## 📌 Prints
+./prints
+
 ------------------------------------------------------------------------
 
 # 🚀 Funcionalidades
 
 ## 📌 Gestão de Cargos
 
--   Cadastro de cargos
+-   Cadastro de cargos 
 -   Edição de cargos
 -   Visualização de cargos
 -   Exclusão de cargos
