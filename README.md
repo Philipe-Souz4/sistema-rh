@@ -144,17 +144,7 @@ para exibir o **nome do cargo nas listagens**.
 
 ------------------------------------------------------------------------
 
-<<<<<<< HEAD
-# 🎨 Prints
-
-
-
-
-------------------------------------------------------------------------
-
-=======
->>>>>>> f1bc5fef82b2b27f00e8060ab85a2a25170427ed
-# 👨‍💻 Philipe Souza
+### 👨‍💻 Philipe Souza
 
 Projeto desenvolvido como **desafio técnico** utilizando Yii2 e
 PostgreSQL.
