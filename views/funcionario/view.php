@@ -33,9 +33,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'nome',
             [   // formata CPF com mascara 999.999.999-99 ou null se tiver vazio
                 'attribute' => 'cpf',
-                'value' => !empty($model->cep)
-                    ? preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "$1.$2.$3-$4", $model->cpf)
-                    : null,
+                'value' => function ($model) {
+                return $model->formattedCpf;
+                },
             ],
             'logradouro',
             [   // formata CEP com mascara 99999-999 ou null se tiver vazio

@@ -31,26 +31,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'nome',
-            [   // formata CPF com mascara 999.999.999-99 ou null se tiver vazio
+            [   // CPF com mascara 999.999.999-99 ou null se tiver vazio
                 'attribute' => 'cpf',
                 'value' => function ($model) {
-                    if (empty($model->cpf)) {
-                        return null; 
-                    }
-                    return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "$1.$2.$3-$4", $model->cpf);
+                return $model->formattedCpf;
                 },
                 'contentOptions' => [
                     'style' => 'white-space: nowrap;'
                 ],
             ],
             'logradouro',
-            [   // formata CEP com mascara 99999-999 ou null se tiver vazio
+            [   // CEP com mascara 99999-999 ou null se tiver vazio
                 'attribute' => 'cep',
                 'value' => function ($model) {
-                    if (empty($model->cep)) {
-                        return null; 
-                    }
-                    return preg_replace("/(\d{5})(\d{3})/", "$1-$2", $model->cep);
+                return $model->formattedCep;
                 },
                 'contentOptions' => [
                     'style' => 'white-space: nowrap;'

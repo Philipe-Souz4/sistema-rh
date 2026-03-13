@@ -23,6 +23,39 @@ use Yii;
 class Funcionario extends \yii\db\ActiveRecord
 {
 
+    /**
+     * Retorna o CPF com a máscara 000.000.000-00
+     * @return string
+     */
+    public function getFormattedCpf()
+    {
+        // Remove qualquer caractere que não seja número
+        $cpf = preg_replace('/[^0-9]/', '', $this->cpf);
+
+        if (strlen($cpf) === 11) {
+            return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "$1.$2.$3-$4", $cpf);
+        }
+
+        return $this->cpf; // Retorna o valor original se não tiver 11 dígitos
+    }
+
+
+    /**
+     * Retorna o CEP com a máscara 00000-000
+     * @return string
+     */
+    public function getFormattedCep()
+    {
+        // Remove caracteres não numéricos para garantir a formatação
+        $cep = preg_replace('/[^0-9]/', '', $this->cep);
+
+        if (strlen($cep) === 8) {
+            return preg_replace("/(\d{5})(\d{3})/", "$1-$2", $cep);
+        }
+
+        return $this->cep; // Retorna o original caso não tenha 8 dígitos
+    }
+
 
     /**
      * {@inheritdoc}
