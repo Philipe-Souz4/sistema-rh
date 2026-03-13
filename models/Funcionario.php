@@ -76,9 +76,15 @@ class Funcionario extends \yii\db\ActiveRecord
             [['cargo_id'], 'default', 'value' => null],
             [['cargo_id'], 'integer'],
             [['nome', 'logradouro'], 'string', 'max' => 150],
-            ['cpf', 'string', 'min' => 11, 'max' => 11],
+            [['cpf', 'cep'], 'filter', 'filter' => function ($value) {
+                return preg_replace('/[^0-9]/', '', $value);
+            }],
+            ['cpf', 'string', 'min' => 11, 'max' => 11, 'enableClientValidation' => false],
             ['cpf', 'unique', 'message' => 'Este CPF já está cadastrado.'],
-            ['cep', 'string', 'min' => 8, 'max' => 8],
+            ['cep', 'filter', 'filter' => function ($value) {
+                return preg_replace('/[^0-9]/', '', $value);
+            }],
+            ['cep', 'string', 'min' => 8, 'max' => 8, 'enableClientValidation' => false],
             [['cidade', 'complemento'], 'string', 'max' => 100],
             [['estado'], 'string', 'max' => 2],
             [['cpf'], 'unique'],
