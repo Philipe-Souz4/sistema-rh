@@ -40,9 +40,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'logradouro',
             [   // formata CEP com mascara 99999-999 ou null se tiver vazio
                 'attribute' => 'cep',
-                'value' => !empty($model->cep) 
-                    ? preg_replace("/(\d{5})(\d{3})/", "$1-$2", $model->cep) 
-                    : null,
+                'value' => function ($model) {
+                return $model->formattedCep;
+                },
             ],
             'cidade',
             'estado',
