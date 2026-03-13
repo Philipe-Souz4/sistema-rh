@@ -5,8 +5,9 @@ desenvolvido como parte de um desafio técnico. O projeto utiliza o
 framework **Yii2 (Basic)** com banco de dados **PostgreSQL**.
 
 ## 📌 Prints e notas
-Veja todas as imagens do sistema na pasta abaixo:
+Veja as imagens do sistema na pasta abaixo:
 👉 [Abrir pasta de prints](./prints)
+Veja as anotações sobre o Yii:
 👉 [Abrir anotações](https://www.notion.so/YII2-2b2f3fe951ae80d8ad1acc82f2fca196?source=copy_link)
 
 ------------------------------------------------------------------------
