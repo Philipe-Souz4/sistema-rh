@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'nome',
-            [   // CPF com mascara 999.999.999-99 ou null se tiver vazio
+            [   // CPF com mascara 999.999.999-99
                 'attribute' => 'cpf',
                 'value' => function ($model) {
                     return $model->formattedCpf;
