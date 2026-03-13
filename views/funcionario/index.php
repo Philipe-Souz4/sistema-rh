@@ -34,7 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
             [   // CPF com mascara 999.999.999-99 ou null se tiver vazio
                 'attribute' => 'cpf',
                 'value' => function ($model) {
-                return $model->formattedCpf;
+                    if (empty($model->cpf)) {
+                        return null; 
+                    }
+                    return $model->formattedCpf;
                 },
                 'contentOptions' => [
                     'style' => 'white-space: nowrap;'
@@ -44,8 +47,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [   // CEP com mascara 99999-999 ou null se tiver vazio
                 'attribute' => 'cep',
                 'value' => function ($model) {
-                return $model->formattedCep;
-                },
+                    if (empty($model->cep)) {
+                        return null; 
+                    }
+                    return $model->formattedCep;
+                    },
                 'contentOptions' => [
                     'style' => 'white-space: nowrap;'
                 ],
