@@ -81,9 +81,6 @@ class Funcionario extends \yii\db\ActiveRecord
             }],
             ['cpf', 'string', 'min' => 11, 'max' => 11, 'enableClientValidation' => false],
             ['cpf', 'unique', 'message' => 'Este CPF já está cadastrado.'],
-            ['cep', 'filter', 'filter' => function ($value) {
-                return preg_replace('/[^0-9]/', '', $value);
-            }],
             ['cep', 'string', 'min' => 8, 'max' => 8, 'enableClientValidation' => false],
             [['cidade', 'complemento'], 'string', 'max' => 100],
             [['estado'], 'string', 'max' => 2],
