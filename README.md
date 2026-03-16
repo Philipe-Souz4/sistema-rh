@@ -26,10 +26,9 @@ Sistema de gerenciamento de funcionários e cargos desenvolvido com **Yii2 (Basi
 ## 📦 Como Instalar e Rodar
 
 ### 1. Clonar o repositório
-```bash
 git clone [https://github.com/Philipe-Souz4/sistema-rh.git](https://github.com/Philipe-Souz4/sistema-rh.git)
 cd sistema-rh
-```
+
 ### 2. Configurar o Banco de Dados
 Edite o arquivo config/db.php com suas credenciais do PostgreSQL
 
