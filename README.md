@@ -27,7 +27,7 @@ Sistema de gerenciamento de funcionários e cargos desenvolvido com **Yii2 (Basi
 
 ### 1. Clonar o repositório
 ```bash
-git clone [https://github.com/Philipe-Souz4/sistema-rh.git](https://github.com/Philipe-Souz4/sistema-rh.git)
+git clone https://github.com/Philipe-Souz4/sistema-rh.git
 cd sistema-rh
 ```
 
