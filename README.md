@@ -12,7 +12,6 @@ Sistema de gerenciamento de funcionários e cargos desenvolvido com **Yii2 (Basi
 * **Gestão de Cargos:** CRUD completo de cargos.
 * **Gestão de Funcionários:** Cadastro com vínculo obrigatório a um cargo.
 * **Validações:** CPF único com 11 dígitos e máscaras de entrada (CPF/CEP).
-* **Interface pt-BR:** Sistema totalmente em português e formatado para o usuário brasileiro.
 
 ---
 
