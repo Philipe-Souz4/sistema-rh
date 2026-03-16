@@ -36,8 +36,8 @@ Edite o arquivo config/db.php com suas credenciais do PostgreSQL
 ### 3. Instalação Automática
 Para facilitar a instalação das dependências (Composer) e a criação das tabelas (Migrations), utilize os instaladores na raiz:
 
-No Windows: Execute o arquivo instalar.bat
-No Linux/Mac: Execute o arquivo instalar.sh
+- No Windows: Execute o arquivo instalar.bat
+- No Linux/Mac: Execute o arquivo instalar.sh
 
 ### 4. Após a instalação, inicie o servidor interno do Yii:
 ```bash
