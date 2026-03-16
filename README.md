@@ -1,154 +1,47 @@
 # 🏢 Sistema de Gestão de RH - Yii2
 
-Este é um sistema de **gerenciamento de funcionários e cargos**
-desenvolvido como parte de um desafio técnico. O projeto utiliza o
-framework **Yii2 (Basic)** com banco de dados **PostgreSQL**.
+Sistema de gerenciamento de funcionários e cargos desenvolvido com **Yii2 (Basic)** e **PostgreSQL**.
 
-## 📌 Prints e notas
-- Veja as imagens do sistema: 👉 [Abrir pasta de prints](./prints)
-- Veja as anotações sobre o Yii: 👉 [Abrir anotações](https://www.notion.so/YII2-2b2f3fe951ae80d8ad1acc82f2fca196?source=copy_link)
+## 📌 Links Úteis
+- **Prints do Sistema:** [Abrir pasta de imagens](./prints)
+- **Minhas Anotações:** [Notion - Estudo Yii2](https://www.notion.so/YII2-2b2f3fe951ae80d8ad1acc82f2fca196)
 
-------------------------------------------------------------------------
+---
 
-# 🚀 Funcionalidades
+## 🚀 Funcionalidades Principais
+* **Gestão de Cargos:** CRUD completo de cargos.
+* **Gestão de Funcionários:** Cadastro com vínculo obrigatório a um cargo.
+* **Validações:** CPF único com 11 dígitos e máscaras de entrada (CPF/CEP).
+* **Interface pt-BR:** Sistema totalmente em português e formatado para o usuário brasileiro.
 
-## 📌 Gestão de Cargos
+---
 
--   Cadastro de cargos 
--   Edição de cargos
--   Visualização de cargos
--   Exclusão de cargos
+## 🛠️ Tecnologias
+* **PHP 8.x** + **Yii2 Framework**
+* **PostgreSQL**
+* **Bootstrap 5**
 
-## 👨‍💼 Gestão de Funcionários
+---
 
--   Cadastro completo de funcionários
--   Vínculo obrigatório com um cargo
--   Validação de **CPF único com 11 dígitos**
--   Máscaras de entrada para **CPF** e **CEP**
--   Formatação automática na listagem (exibição do **nome do cargo em
-    vez do ID**)
+## 📦 Como Instalar e Rodar
 
-## 🎨 Interface Otimizada
-
--   Sistema **100% em Português (pt-BR)**
--   Colunas de ação alinhadas e estilizadas
--   Layout limpo e focado no usuário
-
-------------------------------------------------------------------------
-
-# 🛠️ Tecnologias Utilizadas
-
--   **Framework:** Yii2 Framework
--   **Linguagem:** PHP 8.x
--   **Banco de Dados:** PostgreSQL
--   **Frontend:** Bootstrap 5 (via Yii2)
--   **Extensões:**
-    -   `yii2-widgets-maskedinput` para máscaras de formulário
-
-------------------------------------------------------------------------
-
-# 📦 Como Instalar
-
-## 1️⃣ Clonar o repositório
-
-``` bash
-git clone https://github.com/Philipe-Souz4/sistema-rh.git
+### 1. Clonar o repositório
+```bash
+git clone [https://github.com/Philipe-Souz4/sistema-rh.git](https://github.com/Philipe-Souz4/sistema-rh.git)
 cd sistema-rh
 ```
+### 2. Configurar o Banco de Dados
+Edite o arquivo config/db.php com suas credenciais do PostgreSQL
 
-------------------------------------------------------------------------
+### 3. Instalação Automática
+Para facilitar a instalação das dependências (Composer) e a criação das tabelas (Migrations), utilize os instaladores na raiz:
 
-## 2️⃣ Instalar dependências
+No Windows: Execute o arquivo instalar.bat
+No Linux/Mac: Execute o arquivo instalar.sh
 
-``` bash
-composer install
+### 4. Após a instalação, inicie o servidor interno do Yii:
+```bash
+php yii serve
 ```
-
-------------------------------------------------------------------------
-
-## 3️⃣ Configurar o Banco de Dados
-
-No arquivo:
-
-    config/db.php
-
-Configure as credenciais do PostgreSQL:
-
-``` php
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'pgsql:host=localhost;port=5432;dbname=nome_do_banco',
-    'username' => 'seu_usuario',
-    'password' => 'sua_senha',
-    'charset' => 'utf8',
-];
-```
-
-------------------------------------------------------------------------
-
-## 4️⃣ Importar o Schema (SQL)
-
-Crie as tabelas utilizando os scripts abaixo:
-
-``` sql
-CREATE TABLE cargo (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE funcionario (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(150) NOT NULL,
-    cpf VARCHAR(11) NOT NULL UNIQUE,
-    cep VARCHAR(8),
-    logradouro VARCHAR(150),
-    numero VARCHAR(10),
-    complemento VARCHAR(150),
-    cidade VARCHAR(150),
-    estado VARCHAR(2),
-    cargo_id INTEGER NOT NULL,
-    FOREIGN KEY (cargo_id) REFERENCES cargo (id)
-);
-```
-
-------------------------------------------------------------------------
-
-# ⚙️ Configurações Aplicadas
-
-### 🌎 Idioma
-
-Configurado para **pt-BR** em:
-
-    config/web.php
-
-### 🔢 Máscaras de Campos
-
-Aplicadas via **MaskedInput** nos campos:
-
--   CPF
--   CEP
-
-No formulário de funcionários.
-
-### 🧱 Arquitetura
-
-O sistema segue o padrão **MVC** do Yii2:
-
--   **Models:** Regras de negócio e validações
--   **Controllers:** Controle das ações
--   **Views:** Interface com o usuário
-
-Relacionamento entre **Funcionário → Cargo** implementado com:
-
-``` php
-hasOne()
-```
-
-para exibir o **nome do cargo nas listagens**.
-
-------------------------------------------------------------------------
-
-# 👨‍💻 Philipe Souza
-
-Projeto desenvolvido como **desafio técnico** utilizando Yii2 e
-PostgreSQL.
+### 👨‍💻 Desenvolvido por
+Philipe Souza - Desafio Técnico

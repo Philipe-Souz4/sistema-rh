@@ -1,9 +1,0 @@
-<?php
-
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'pgsql:host=localhost;port=5432;dbname=nome_do_seu_banco',
-    'username' => 'seu_usuario',
-    'password' => 'sua_senha',
-    'charset' => 'utf8',
-];
