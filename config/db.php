@@ -3,7 +3,7 @@
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'pgsql:host=localhost;dbname=projeto_rh',
-    'username' => 'postgres',
-    'password' => '1425',
+    'username' => 'SEU_USUARIO',
+    'password' => 'SUA_SENHA',
     'charset' => 'utf8',
 ];
